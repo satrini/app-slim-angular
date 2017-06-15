@@ -1,0 +1,33 @@
+<div class="jumbotron">
+	<h2 class="text-center">PIC</h2>
+</div>
+
+<p class="alert alert-info" ng-show="msg.length">{{msg}}</p>
+
+<div class="well well-md">
+	<div class="row">
+		<div class="col-md-12">
+			<form>
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-btn">
+							<a href="/#!/photos/new" class="btn btn-success text-center">Nova Foto</a>
+						</span>
+						<input ng-model="fil" type="text" class="form-control" placeholder="Filtrar">
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<my-panel-photo class="col-sm-4" ng-repeat="photo in photos | filter: fil" tit="{{photo.name | uppercase}}">
+	<img class="img-responsive center-block" ng-src="{{photo.url}}" alt="{{photo.name}}">
+	<hr>
+	<a href="/#!/photos/edit/{{photo.id}}" class="btn btn-warning btn-block">Editar</a>
+	<button ng-click="drop(photo)" class="btn btn-danger btn-block">Remover</button>
+</my-panel-photo>
+
+
+
+	

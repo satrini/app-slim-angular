@@ -1,0 +1,52 @@
+<div class="jumbotron">
+	<h2 class="text-center">PIC</h2>
+</div>
+
+
+<p ng-show="msg.length" class="alert alert-info">{{msg}}</p>
+
+<div class="col-md-6">
+	<form novalidate name="forms" class="row" ng-submit="submit(photo)">
+		<div class="form-group">
+			<label class="sr-only">Titulo: </label>
+			<input ng-maxlength="20" ng-model="photo.name" required type="text" name="name" class="form-control" placeholder="Titulo">
+
+			<span ng-show="forms.$submitted && forms.name.$error.required" class="form-control alert-danger">
+				Título obrigatório
+			</span>
+			<span ng-show="forms.$submitted && forms.name.$error.maxlength" class="form-control alert-danger">
+				Deve ter no máximo 20 caracteres
+			</span>
+
+		</div>
+
+		<div class="form-group">
+			<label class="sr-only">URL: </label>
+			<input ng-model="photo.url" required type="text" name="url" class="form-control" placeholder="URL">
+
+			<span ng-show="forms.$submitted && forms.url.$error.required" class="form-control alert-danger">
+				Url obrigatório
+			</span>
+			
+		</div>
+
+		<div class="form-group">
+			<label class="sr-only">Descrição: </label>
+			<textarea ng-model="photo.description" name="description" cols="30" rows="10" class="form-control"></textarea>
+		</div>
+
+		<button ng-disabled="forms.$invalid" type="submit" class="btn btn-info">Salvar</button>
+		<a href="/#!/photos" class="btn btn-primary" my-focus>Voltar</a>
+
+		<hr>
+
+	</form>
+</div>
+
+<div class="col-md-6">
+	<my-panel-photo tit="{{photo.name | uppercase}}">
+		<img class="img-responsive center-block" ng-src="{{photo.url}}" alt="{{photo.name}}">
+		<hr>
+		<p>{{photo.description}}</p>
+	</my-panel-photo>
+</div>

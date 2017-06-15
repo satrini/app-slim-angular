@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR" ng-app="pic">
+<head>
+	<meta charset="UTF-8">
+	<title>PIC</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<script src="node_modules/angular/angular.min.js"></script>
+	<script src="node_modules/angular-route/angular-route.min.js"></script>
+	<script src="node_modules/angular-resource/angular-resource.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/controllers/photos-controller.js"></script>
+	<script src="js/controllers/new-photo-controller.js"></script>
+	<script src="js/controllers/edit-photo-controller.js"></script>
+	<script src="js/directives/my-directives.js"></script>
+	<script src="js/services/service.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<ng-view></ng-view>
+		</div>
+	</div>
+
+	<!-- <script src="node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
+</body>
+</html>
