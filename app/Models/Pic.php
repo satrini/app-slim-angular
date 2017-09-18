@@ -10,7 +10,7 @@ class Pic extends Eloquent
 
 	protected $table = 'pics';
 
-	protected $fillable = ['name', 'url', 'description'];
+	protected $fillable = ['title', 'url', 'description'];
 	
 	public $timestamps = false;
 }

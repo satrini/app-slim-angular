@@ -17,7 +17,7 @@ $app->get('/api/images', function ($request, $response, $args) {
 // get data
 $app->get('/api/images/{id}', function ($request, $response, $args) {
      
-	$json = $this->db->table('pics')->where('id', '=', $args['id'])->get();
+   $json = $this->db->table('pics')->where('id', '=', $args['id'])->get();
 
    return $response->withJson($json);
 });
@@ -26,7 +26,7 @@ $app->get('/api/images/{id}', function ($request, $response, $args) {
 $app->post('/api/images', function ($request, $response, $args) { 
 
 	$data   = $request->getParsedBody();
-   $table  = $this->db->table('pics');
+    $table  = $this->db->table('pics');
   	$pic    = $table->insert($data);
 
   	return $response->withStatus(200);

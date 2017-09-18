@@ -9,9 +9,9 @@
 	<form novalidate name="forms" class="row" ng-submit="submit(photo)">
 		<div class="form-group">
 			<label class="sr-only">Titulo: </label>
-			<input ng-maxlength="20" ng-model="photo.name" required type="text" name="name" class="form-control" placeholder="Titulo">
+			<input ng-maxlength="20" ng-model="photo.title" required type="text" name="title" class="form-control" placeholder="Titulo">
 
-			<span ng-show="forms.$submitted && forms.name.$error.required" class="form-control alert-danger">
+			<span ng-show="forms.$submitted && forms.title.$error.required" class="form-control alert-danger">
 				Título obrigatório
 			</span>
 			<span ng-show="forms.$submitted && forms.name.$error.maxlength" class="form-control alert-danger">

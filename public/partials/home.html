@@ -21,7 +21,7 @@
 	</div>
 </div>
 
-<my-panel-photo class="col-sm-4" ng-repeat="photo in photos | filter: fil" tit="{{photo.name | uppercase}}">
+<my-panel-photo class="col-sm-4" ng-repeat="photo in photos | filter: fil" tit="{{photo.title | uppercase}}">
 	<img class="img-responsive center-block" ng-src="{{photo.url}}" alt="{{photo.name}}">
 	<hr>
 	<a href="/#!/photos/edit/{{photo.id}}" class="btn btn-warning btn-block">Editar</a>
