@@ -1,6 +1,6 @@
 angular.module('myDirectives', []).directive('myPanelPhoto', function(){
 
-   // DDO
+    // DDO
 	let tag = {};
 
 	tag.restric = 'E';

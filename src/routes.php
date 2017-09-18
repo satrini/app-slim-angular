@@ -11,7 +11,7 @@ $app->get('/api/images', function ($request, $response, $args) {
     
 	$json = $this->db->table('pics')->get();
 
-   return $response->withJson($json);
+    return $response->withJson($json);
 });
 
 // get data
