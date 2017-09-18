@@ -18,7 +18,7 @@
 	<form novalidate name="forms" class="row" ng-submit="submit(photo)">
 		<div class="form-group">
 			<label class="sr-only">Titulo: </label>
-			<input ng-model="photo.name" ng-maxlength="20" required type="text" name="name" class="form-control input-lg" value="{{photo.name}}">
+			<input ng-model="photo.title" ng-maxlength="20" required type="text" name="name" class="form-control input-lg" value="{{photo.name}}">
 			<span ng-show="forms.$submitted && forms.name.$error.required" class="form-control alert-danger">
 				Título obrigatório
 			</span>

@@ -1,14 +1,13 @@
 {
-    "name": "slim/slim-skeleton",
-    "description": "A Slim Framework skeleton application for rapid development",
-    "keywords": ["microframework", "rest", "router", "psr7"],
-    "homepage": "http://github.com/slimphp/Slim-Skeleton",
+    "name": "satrini/app-slim-angular",
+    "description": "App for upload images",
+    "homepage": "http://github.com/satrini/app-slim-angular",
     "license": "MIT",
     "authors": [
         {
-            "name": "Josh Lockhart",
-            "email": "info@joshlockhart.com",
-            "homepage": "http://www.joshlockhart.com/"
+            "name": "Eduardo Henrique",
+            "email": "eduardosatrini@gmail.com",
+            "homepage": "https://www.eduardohenrique.com.br"
         }
     ],
     "require": {
@@ -32,7 +31,7 @@
         }
     },
 	"scripts": {
-        "start": "php -S 0.0.0.0:8080 -t public public/index.php",
+        "start": "php -S 127.0.0.1:8080 -t public public/index.php",
         "test": "phpunit"
 	}
 

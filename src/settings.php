@@ -22,7 +22,7 @@ return [
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
 			'port'      => '3306',
-			'database'  => 'base',
+			'database'  => 'app-pic',
 			'username'  => 'root',
 			'password'  => '',
 			'charset'   => 'utf8mb4',
