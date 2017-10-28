@@ -5,5 +5,4 @@ angular.module('myServices', ['ngResource']).factory('resourcePhoto', function($
 			method: 'PUT'
 		}		
 	});
-
 });

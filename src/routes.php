@@ -9,7 +9,7 @@ $app->get('/', function ($request, $response, $args) {
 // all data
 $app->get('/api/images', function ($request, $response, $args) {
     
-	$json = $this->db->table('pics')->get();
+	  $json = $this->db->table('pics')->get();
 
     return $response->withJson($json);
 });
@@ -25,7 +25,7 @@ $app->get('/api/images/{id}', function ($request, $response, $args) {
 // insert data
 $app->post('/api/images', function ($request, $response, $args) { 
 
-	$data   = $request->getParsedBody();
+	  $data   = $request->getParsedBody();
     $table  = $this->db->table('pics');
   	$pic    = $table->insert($data);
 
@@ -35,9 +35,9 @@ $app->post('/api/images', function ($request, $response, $args) {
 // update data
 $app->put('/api/images/{id}', function ($request, $response, $args) {
 
-	$data = $request->getParsedBody();
-	$pic = $this->db->table('pics')->where('id', '=', $args['id']);
-	$pic->update($data);
+  	$data = $request->getParsedBody();
+  	$pic = $this->db->table('pics')->where('id', '=', $args['id']);
+  	$pic->update($data);
 
   	return $response->withStatus(200);
 });
@@ -45,8 +45,8 @@ $app->put('/api/images/{id}', function ($request, $response, $args) {
 // delete data
 $app->delete('/api/images/{id}', function ($request, $response, $args) { 
 
-	$pic = $this->db->table('pics')->where('id', '=', $args['id']);
-	$pic->delete();
+  	$pic = $this->db->table('pics')->where('id', '=', $args['id']);
+  	$pic->delete();
 
   	return $response->withStatus(200);
 });
